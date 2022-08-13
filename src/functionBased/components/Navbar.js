@@ -34,7 +34,7 @@ const NavBar = () => {
                 {navbarOpen ? (
                     <MdClose style={{ color: "#fff", width: "40px", height: "40px" }} />
                 ) : (
-                    <FiMenu style={{ color: "#7b7b7b", width: "40px", height: "40px" }} />
+                    <FiMenu style={{ color: "#0077b6", width: "40px", height: "40px" }} />
                 )}
             </button>
             <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>

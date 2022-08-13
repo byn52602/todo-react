@@ -14,10 +14,13 @@ const TodoItem = props => {
             setEditing(false)
         }
     }
+    const imcompletedStyle = {
+        color: "#0077b6",
+    }
     const completedStyle = {
         fontStyle: "italic",
-        color: "#595959",
-        opacity: 0.4,
+        color: "grey",
+        opacity: 0.8,
         textDecoration: "line-through",
     }
     const { completed, id, title } = props.todo;
@@ -46,9 +49,9 @@ const TodoItem = props => {
                     className={styles.checkbox}
                 />
                 <button onClick={() => props.deleteTodoProps(id)}>
-                    <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
+                    <FaTrash style={{ color: "#dd1c1a", fontSize: "16px", background: "transparent" }} />
                 </button>
-                <span style={completed ? completedStyle : null}>
+                <span style={completed ? completedStyle : imcompletedStyle}>
                     {title}
                 </span>
             </div>

@@ -13,10 +13,10 @@ const SinglePage = () => {
             slug: "about-author",
             title: "About the Author",
             description:
-                "This app was developed by Yani Bu, a self-taught web developer and a technical writer.",
+                "This app was developed by Yani Bu, a self-taught web developer and a former Computer Science student from the University of Waterloo. She is currently seeking a full-time position as a full-stack web developer, front-end engineer, or UI engineer. Please contact her through Linkedin: 'https://www.linkedin.com/in/yani-bu/'.",
         },
     ]
-    const { slug } = useParams();
+    const { slug = "about-app" } = useParams();
     const { title, description } = aboutData.find(item => item.slug === slug);
     return (
         <div className="main__content">

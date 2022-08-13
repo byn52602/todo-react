@@ -7,8 +7,7 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.4;
-    color: #444;
-    background: #fff;
+    background: #EBF9FC;
     height: 100vh;
 }
 
@@ -42,12 +41,11 @@ body {
     padding-right: 5px;
     padding-left: 10px;
     border-radius: calc(0.5 * 100px);
+    background: transparent;
 }
 
 .input-submit {
     background: transparent;
-    color: #5b5b5b;
-    text-transform: capitalize;
     cursor: pointer;
     font-weight: 600;
     margin-right: 10px;
@@ -61,13 +59,13 @@ body {
 }
 
 .input-submit svg {
-    color: darkcyan;
+    color: #0077b6;
     font-size: 20px;
     margin-top: 2px;
 }
 
 .active {
-    color: orangered;
+    color: #ffc600;
     text-decoration: underline;
 }
 
@@ -92,7 +90,7 @@ body {
     list-style: none;
     position: fixed;
     top: 0;
-    background: darkcyan;
+    background: #0077b6;
     left: 0;
     bottom: 0;
     height: 100vh;
@@ -110,7 +108,7 @@ a {
     display: block;
     padding: 10px 40px;
     text-decoration: none;
-    color: #3fffd2;
+    color: #caf0f8;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -133,8 +131,6 @@ a {
 }
 
 .about__list a {
-    color: #9f9f9f;
-    text-transform: capitalize;
     padding: 20px 0;
     font-weight: 600;
 }
@@ -151,8 +147,11 @@ a {
     margin-bottom: 15px;
     line-height: 30px;
     font-size: 30px;
+    color: #0077b6
 }
 
 .main__content p {
     line-height: 25px;
+    color: #999999;
+    letter-spacing: 1px;
 }
