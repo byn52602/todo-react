@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from "uuid";
+import { Route, Routes, Switch } from "react-router-dom"
+
 import TodosList from './TodosList';
 import Header from './Header';
 import InputTodo from './InputTodo';
+import NavBar from './Navbar';
+import About from '../pages/About';
+import NoMatch from '../pages/NoMatch';
 
 const TodoContainer = () => {
 
@@ -85,18 +90,32 @@ const TodoContainer = () => {
     // }, []);
 
     return (
-        <div className='container'>
-            <div className='inner'>
-                <Header />
-                <InputTodo addTodoProps={addTodoItem} />
-                <TodosList
-                    todos={todos}
-                    handleChangeProps={handleChange}
-                    deleteTodoProps={deleteTodo}
-                    updateTodoProps={updateTodo}
-                />
-            </div>
-        </div>
+        // This is a React frament
+        <>
+            <NavBar />
+            <Routes>
+                <Route exact path="/" element={
+                    <div className='container'>
+                        <div className='inner'>
+                            <Header />
+                            <InputTodo addTodoProps={addTodoItem} />
+                            <TodosList
+                                todos={todos}
+                                handleChangeProps={handleChange}
+                                deleteTodoProps={deleteTodo}
+                                updateTodoProps={updateTodo}
+                            />
+                        </div>
+                    </div>
+                } />
+                <Route path="/about/*" element={
+                    <About />
+                } />
+                <Route path="/*" element={
+                    <NoMatch />
+                } />
+            </Routes>
+        </>
     );
 
 }
